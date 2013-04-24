@@ -8,6 +8,8 @@ This is a (mostly) pure JavaScript implementation of the WebSocket protocol vers
 Current News
 ------------
 
+- This forked version [marekjulian/WebSocket-Node](https://github.com/marekjulian/WebSocket-Node) of the [original repo](https://github.com/Worlize/WebSocket-Node) has been enhanced to suppport a somewhat non-standard protocal of ws+unix which does NOT require a hostname, nor path, and the path should referenced a file descriptor to a Unix Domain Socket.
+
 - As of version 1.0.7, ***Native modules are now optional.*** If they fail to compile, WebSocket-Node will still work but will not verify that received UTF-8 data is valid, and xor masking/unmasking of payload data for security purposes will not be as efficient as it is performed in JavaScript instead of native code.
 
 - Version 1.0.7 requires node v0.6.10, since that's the first version that I can manage to successfully build the native extensions with node-gyp through npm.  If anyone can figure out how to build native extensions in a way that works with both older and newer versions of Node, I'm happy to accept a patch!
